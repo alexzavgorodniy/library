@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Date;
+import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -49,7 +50,7 @@ public class Book {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title = Objects.requireNonNull(title,"Title cannot be NULL!");
     }
 
     public Integer getNumberOfPages() {

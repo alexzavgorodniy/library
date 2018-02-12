@@ -17,7 +17,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan({"controller"})
+@ComponentScan({"controller","converter"})
 @Import(JpaConfig.class)
 public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
@@ -54,7 +54,6 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         super.addResourceHandlers(registry);
         registry.addResourceHandler("/static/**").addResourceLocations("/static/");
-
     }
 
     @Override

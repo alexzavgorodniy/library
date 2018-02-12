@@ -69,4 +69,8 @@ public class Author {
         bookList.remove(book);
         book.setAuthor(null);
     }
+
+    public List<Book> getBookList() {
+        return bookList;
+    }
 }
